@@ -1,10 +1,20 @@
 config:
-  target: 'https://finok.com.ua/'  
+  target: 'https://finok.com.ua'  
   phases:
-    - duration: 20  
+    - duration: 60  
       arrivalRate: 10  
+      name: ArtilleryFirstTest
 
 scenarios:
   - flow:
-      - get:
-          url: "/"
+      - post:
+          url: "/login"
+          json:
+            email : '{{ email }}'
+            password: '{{ password }}'
+payload:
+  path: 'users.csv'
+  fields:
+    - email
+    - password
+
