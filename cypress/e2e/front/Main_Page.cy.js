@@ -12,9 +12,9 @@ describe('Main page_Page object', () => {
         Main.validateHttps();
         Main.validateHeader();
         Main.validateFooter();
-        Main.validateHomeContainer();
-        Main.validateRunningString();
-        Main.validateExpeditionBlock();
-        Main.validateNewsBlock();
+        Main.validateHomeSection();
+        Main.validateElementorSection();
+        Main.validateBanksSection();
+        Main.validateAdventageSection();
     });
 })

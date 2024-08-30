@@ -22,19 +22,26 @@ class MainPage {
         cy.contains('.wsmainwp', 'Вхід').should('be.visible');
         cy.contains('.wsmainwp', 'Реєстрація').should('be.visible');
     }
-    validateRunningString() {
-        cy.get('.tapes').should('be.visible');
+    validateHomeSection() {
+        cy.get('#homeSection').should('be.visible');
     }
-    validateMap() {
-        cy.get('.map').should('be.visible');
+    validateElementorSection() {
+        cy.get('.elementor-element-4c93df5').should('be.visible')
+        .within(() => {
+            cy.get('.img-fluid').should('have.length', 5);
+            cy.contains('Звіти, що легко налаштовуються').should('be.visible')
+            cy.contains('Планування').should('be.visible')
+            cy.contains('Облік заробітної плати').should('be.visible')
+            cy.contains('Взаємодії з контрагентами').should('be.visible')
+            cy.contains('Товари та послуги').should('be.visible')
+        })
     }
-    validateExpeditionBlock() {
-        cy.get('.expeditions').should('be.visible');
-        cy.contains('.expeditions', 'Переглянути').should('be.visible');
-        cy.contains('.expeditions', 'Переглянути усі').should('be.visible');
+    validateBanksSection() {
+        cy.get('#integrationWithBanks > .elementor-container > .elementor-column > .elementor-widget-wrap').should('be.visible');
+        cy.get('.swiper-slide-inner').should('have.length', 4);
     }
-    validateNewsBlock() {
-        cy.get('.news').should('be.visible');
+    validateAdventageSection() {
+        cy.get('#ourAdvantagesSection').should('be.visible');
         cy.contains('.news', 'Новини').should('be.visible');
         cy.contains('.news', 'Переглянути усі').should('be.visible');
     }
