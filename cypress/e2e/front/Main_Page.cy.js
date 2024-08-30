@@ -20,5 +20,6 @@ describe('Main page_Page object', () => {
         Main.validateDemonstrationSection();
         Main.validateFaqSection();
         Main.validatePriceSection();
+        Main.validateNewsSection();
     });
 })

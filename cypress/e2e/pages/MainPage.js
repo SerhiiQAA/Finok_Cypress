@@ -79,6 +79,17 @@ class MainPage {
             cy.contains('Business').should('be.visible')
             cy.contains('Business +').should('be.visible')
         })
+        
+    }
+    validateReviewsSection() {
+        cy.get('.elementor-element-d348c63 > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-heading-title').contains('Відгуки').should('be.visible')
+    }
+    validateNewsSection() {
+        cy.get('.elementor-element-2d04a06 > .elementor-container > .elementor-column > .elementor-widget-wrap').should('be.visible')
+        .within(() => {
+            cy.contains('Новини').should('be.visible')
+            cy.contains('Переглянути всі').should('be.visible')
+        })
     }
 }
 export default MainPage;
