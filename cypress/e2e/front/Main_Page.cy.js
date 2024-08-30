@@ -16,5 +16,9 @@ describe('Main page_Page object', () => {
         Main.validateElementorSection();
         Main.validateBanksSection();
         Main.validateAdventageSection();
+        Main.validateWhoSuitsSection();
+        Main.validateDemonstrationSection();
+        Main.validateFaqSection();
+        Main.validatePriceSection();
     });
 })
