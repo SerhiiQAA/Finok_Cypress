@@ -45,11 +45,14 @@ class MainPage {
         cy.get('.elementor-element-5598966').should('be.visible')
             .within(() => {
                 cy.get('.elementor-accordion-title').should('have.length', 5);
-                // cy.contains('Функціональність').should('be.visible')
-                // cy.contains('Гнучкість').should('be.visible')
-                // cy.contains('Економія часу').should('be.visible')
-                // cy.contains('Технічна підтримка').should('be.visible')
             })
+        cy.get('.elementor-element-4c13c00 > .elementor-widget-wrap').scrollIntoView()
+        .within(() => {
+            cy.contains('Функціональність').should('be.visible')
+            cy.contains('Гнучкість').should('be.visible')
+            cy.contains('Економія часу').should('be.visible')
+            cy.contains('Технічна підтримка').should('be.visible')
+        })
     }
     validateWhoSuitsSection() {
         cy.get('#whoSuitsSection').should('be.visible')
