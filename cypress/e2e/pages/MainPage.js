@@ -68,28 +68,61 @@ class MainPage {
     validatePriceSection() {
         cy.get('#priceSection').contains('Тарифи').should('be.visible')
         cy.get('.headerTabs > ul').should('be.visible')
-        .within(() => {
-            cy.contains('Місяць').should('be.visible')
-            cy.contains('Півроку').should('be.visible')
-            cy.contains('Рік').should('be.visible')
-        })
+            .within(() => {
+                cy.contains('Місяць').should('be.visible')
+                cy.contains('Півроку').should('be.visible')
+                cy.contains('Рік').should('be.visible')
+            })
         cy.get('#priceTabSection').should('be.visible')
-        .within(() => {
-            cy.contains('Start').should('be.visible')
-            cy.contains('Business').should('be.visible')
-            cy.contains('Business +').should('be.visible')
-        })
-        
+            .within(() => {
+                cy.contains('Start').should('be.visible')
+                cy.contains('Business').should('be.visible')
+                cy.contains('Business +').should('be.visible')
+            })
     }
     validateReviewsSection() {
         cy.get('.elementor-element-d348c63 > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-heading-title').contains('Відгуки').should('be.visible')
     }
     validateNewsSection() {
         cy.get('.elementor-element-2d04a06 > .elementor-container > .elementor-column > .elementor-widget-wrap').should('be.visible')
-        .within(() => {
-            cy.contains('Новини').should('be.visible')
-            cy.contains('Переглянути всі').should('be.visible')
-        })
+            .within(() => {
+                cy.contains('Новини').should('be.visible')
+                cy.contains('Переглянути всі').should('be.visible')
+            })
+    }
+    validateWillBeSoonSection() {
+        cy.get('#willBeSoonSection').should('be.visible')
+        cy.get('#willBeSoonSection > :nth-child(1) > .elementor-col-100 > :nth-child(1)').should('be.visible')
+        cy.get('#willBeSoonSection > :nth-child(1) > .elementor-col-100 > :nth-child(1)')
+            .within(() => {
+                cy.contains('Товари та послуги').should('be.visible')
+                cy.contains('Розширена картка контрагента').should('be.visible')
+                cy.contains('Виставлення інвойсів').should('be.visible')
+                cy.contains('Інтеграція платежів з банками та іншими системами').should('be.visible')
+            })
+    }
+    validateContactUsSection() {
+        cy.get('#contactUsSection').should('be.visible')
+        cy.get('#willBeSoonSection > :nth-child(1) > .elementor-col-100 > :nth-child(1)').should('be.visible')
+        cy.get('.elementor-element-3da457a > .elementor-widget-wrap')
+            .within(() => {
+                cy.contains('Залишилися питання?').should('be.visible')
+                cy.contains('Надіслати').should('be.visible')
+            })
+    }
+    validateFooterSection() {
+        cy.get('#footer-4').should('be.visible')
+            .within(() => {
+                cy.contains('Документи').should('be.visible')
+                cy.contains('Політика конфіденційності').should('be.visible')
+                cy.contains('Договір публічної оферти').should('be.visible')
+                cy.contains('Соціальні мережі').should('be.visible')
+                cy.contains('Контакти').should('be.visible')
+                cy.contains('+380 93 988 0773').should('be.visible')
+                cy.contains('info@finok.com.ua').should('be.visible')
+                cy.contains('*З кожного платежу 5% йде на потреби ЗСУ').should('be.visible')
+                cy.contains('2023 © Copyright, FinOK. All rights reserved.').should('be.visible')
+            })
     }
 }
 export default MainPage;
