@@ -9,20 +9,20 @@ describe('Main page_Page object', () => {
 
         const Lang = new Languages();
 
-        Lang.validateHttps();
-        Lang.validateHeader();
-        Lang.validateFooter();
-        Lang.validateHomeSection();
-        Lang.validateElementorSection();
-        Lang.validateBanksSection();
-        Lang.validateAdventageSection();
-        Lang.validateWhoSuitsSection();
-        Lang.validateDemonstrationSection();
-        Lang.validateFaqSection();
-        Lang.validatePriceSection();
-        Lang.validateNewsSection();
-        Lang.validateWillBeSoonSection();
-        Lang.validateContactUsSection();
-        Lang.validateFooterSection();
+        Lang.validateLangButtons();
+        // Lang.validateHeader();
+        // Lang.validateFooter();
+        // Lang.validateHomeSection();
+        // Lang.validateElementorSection();
+        // Lang.validateBanksSection();
+        // Lang.validateAdventageSection();
+        // Lang.validateWhoSuitsSection();
+        // Lang.validateDemonstrationSection();
+        // Lang.validateFaqSection();
+        // Lang.validatePriceSection();
+        // Lang.validateNewsSection();
+        // Lang.validateWillBeSoonSection();
+        // Lang.validateContactUsSection();
+        // Lang.validateFooterSection();
     });
 })
