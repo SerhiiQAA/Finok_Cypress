@@ -1,6 +1,6 @@
 class MainPage {
     navigate() {
-        cy.visit('https://1000and1songs.com/#/');
+        cy.visit('/');
     }
     validateHttps() {
         cy.location('protocol').should('eq', 'https:');

@@ -25,6 +25,5 @@ describe('Main page_Page object', () => {
         Main.validateWillBeSoonSection();
         Main.validateContactUsSection();
         Main.validateFooterSection();
-
     });
 })

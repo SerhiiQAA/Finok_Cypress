@@ -1,0 +1,6 @@
+class Languages {
+    validateUA() {
+        cy.visit('/')
+    }
+}   
+export default Languages;
