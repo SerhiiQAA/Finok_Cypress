@@ -1,4 +1,4 @@
-describe('MainP', () => {
+describe('Web', () => {
   it('should be publicly accessible', () => {
     cy.viewport(1600, 1020)
     cy.visit('/');

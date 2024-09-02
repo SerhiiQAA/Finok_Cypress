@@ -1,4 +1,4 @@
-describe('MainP', () => {
+describe('Mobile', () => {
     it('normal', () => {
         cy.viewport('iphone-8')
         cy.visit('/');

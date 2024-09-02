@@ -1,4 +1,4 @@
-describe('MainP', () => {
+describe('Tablet', () => {
     it('normal', () => {
         cy.viewport(800, 1100)
         cy.visit('/');
