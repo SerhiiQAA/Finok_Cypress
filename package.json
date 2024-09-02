@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@simonsmith/cypress-image-snapshot": "^9.1.0",
     "allure-cypress": "^3.0.0-beta.11",
     "axe-core": "^4.10.0",
     "cypress": "^13.14.1",

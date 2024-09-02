@@ -21,3 +21,8 @@ import './commands'
 import 'cypress-axe';
 
 import 'cypress-mochawesome-reporter/register';
+
+
+import {addMatchImageSnapshotCommand} from '@simonsmith/cypress-image-snapshot/command'
+
+addMatchImageSnapshotCommand()
