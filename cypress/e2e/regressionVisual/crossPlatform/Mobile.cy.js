@@ -1,3 +1,4 @@
+// import CrossPlatform from "../pages/CrossPlatform.js";
 describe('Mobile', () => {
     it('normal', () => {
         cy.viewport('iphone-8')
